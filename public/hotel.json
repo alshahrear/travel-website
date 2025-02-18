@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "img": "../src/assets/saintMarint.png",
+      "title": "Light bright airy stylish apt & safe peaceful stay",
+      "details": "4 guests   2 bedrooms   2 beds   2 baths",
+      "facility": "Wifi, Air conditioning, Kitchen",
+      "rating": 4.8,
+      "review": 120,
+      "stay": "night",
+      "booking_price": 75
+    },
+    {
+      "id": 2,
+      "img": "../src/assets/Sajek.png",
+      "title": "Cozy modern apartment with city view",
+      "details": "3 guests   1 bedroom   1 bed   1 bath",
+      "facility": "Wifi, Kitchen, Free parking",
+      "rating": 4.6,
+      "review": 98,
+      "stay": "day",
+      "booking_price": 60
+    },
+    {
+      "id": 3,
+      "img": "../src/assets/Sreemongol.png",
+      "title": "Luxury suite in the heart of downtown",
+      "details": "5 guests   3 bedrooms   3 beds   2 baths",
+      "facility": "Wifi, Pool, Gym",
+      "rating": 4.9,
+      "review": 150,
+      "stay": "night",
+      "booking_price": 120
+    },
+    {
+      "id": 4,
+      "img": "../src/assets/Rectangle 27.png",
+      "title": "Beachfront villa with stunning sea view",
+      "details": "6 guests   3 bedrooms   4 beds   3 baths",
+      "facility": "Wifi, Kitchen, Private beach",
+      "rating": 4.7,
+      "review": 200,
+      "stay": "night",
+      "booking_price": 180
+    },
+    {
+      "id": 5,
+      "img": "../src/assets/Rectangle 26.png",
+      "title": "Quiet countryside cottage retreat",
+      "details": "2 guests   1 bedroom   1 bed   1 bath",
+      "facility": "Wifi, Fireplace, Garden",
+      "rating": 4.5,
+      "review": 85,
+      "stay": "day",
+      "booking_price": 50
+    }
+  ]
+  
