@@ -12,7 +12,7 @@ const Blogs = () => {
     
 
     return (
-        <div className="w-[1160px] mx-auto">
+        <div className="w-[1200px] mx-auto">
             <div className='border-b-2 border-gray-200 pb-4'>
                 <Navbar></Navbar>
             </div>

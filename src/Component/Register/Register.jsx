@@ -2,13 +2,21 @@ import { FcGoogle } from "react-icons/fc";
 
 import Navbar from "../Navbar/Navbar";
 import { SiFacebook } from "react-icons/si";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import GoogleLog from "../Google/GoogleLog";
 
 
 const Register = () => {
-   const {createUser} = useContext(AuthContext);
+    const { createUser } = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState('');
+    const [success, setSuccess] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+
+    const location = useLocation();
+    const Navigate = useNavigate();
 
     const handleRegister = e => {
         e.preventDefault();
@@ -20,6 +28,8 @@ const Register = () => {
         const confirmPassword = form.get("confirmPassword");
 
         console.log(name, email, password, confirmPassword);
+        setRegisterError('');
+        setSuccess('');
 
         if (password !== confirmPassword) {
             alert("Passwords do not match!");
@@ -29,9 +39,12 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
+                setSuccess('User create it successfully')
+                Navigate(location?.state ? location.state : "/");
             })
             .catch(error => {
                 console.error(error);
+                setRegisterError(error.message);
             });
     };
 
@@ -65,25 +78,44 @@ const Register = () => {
                         </div>
                         <div className="mb-4">
                             <label className="block mb-2 text-gray-700 font-medium">Password</label>
+                            <div className="relative">
                             <input
-                                type="password"
+                                type={showPassword ? "text" : "password"}
                                 name="password"
                                 className="w-full rounded-sm border-gray-300 focus:border-black py-2"
                                 placeholder="Enter your password"
                                 required
                             />
+                            <span className="absolute text-xl right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
+                                {
+                                    showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                }
+                            </span>
+                            </div>
                         </div>
                         <div className="mb-4">
                             <label className="block mb-2 text-gray-700 font-medium">Confirm Password</label>
+                            <div className="relative">
                             <input
-                                type="password"
+                                type={showPassword ? "text" : "password"}
                                 name="confirmPassword"
                                 className="w-full rounded-sm border-gray-300 focus:border-black py-2"
                                 placeholder="Confirm your password"
                                 required
                             />
+                            <span className="absolute text-xl right-3 top-3" onClick={() => setShowPassword(!showPassword)}>
+                                {
+                                    showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                }
+                            </span>
+                            </div>
                         </div>
-
+                        {
+                            registerError && <p className="text-red-700">{registerError}</p>
+                        }
+                        {
+                            success && <p className="text-green-700">{success}</p>
+                        }
                         <button className="w-full bg-orange-500 text-gray-800 py-2 font-semibold rounded-md hover:bg-orange-600 transition">
                             Create an account
                         </button>
@@ -98,21 +130,8 @@ const Register = () => {
                 </form>
             </div>
 
-            <div className="mt-2 mb-4 flex justify-center">
-                <div>
-                    <div className="flex items-center my-4">
-                        <div className="flex-1 h-[1px] bg-gray-400"></div>
-                        <span className="px-3 font-medium text-gray-600">Or</span>
-                        <div className="flex-1 h-[1px] bg-gray-400"></div>
-                    </div>
-                    <button className="btn px-[110px] rounded-2xl bg-white text-black">
-                        <FcGoogle /> Continue With Google
-                    </button>{" "}
-                    <br />
-                    <button className="btn px-[100px] rounded-2xl bg-white text-black mt-2">
-                        <SiFacebook /> Continue With Facebook
-                    </button>
-                </div>
+            <div>
+                <GoogleLog></GoogleLog>
             </div>
         </div>
     );

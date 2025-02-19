@@ -33,7 +33,7 @@ const routes = createBrowserRouter([
         },
         {
           path: "/blog",
-          element: <Blogs></Blogs>,
+          element: <PrivetRoutes><Blogs></Blogs></PrivetRoutes>,
           loader: () => fetch("hotel.json")
 
           
