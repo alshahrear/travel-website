@@ -6,11 +6,21 @@ import { Link } from "react-router-dom";
 
 
 const Login = () => {
+
+     const handleLogin = e =>{
+        e.preventDefault();
+        console.log(e.currentTarget)
+        const form = new FormData(e.currentTarget);
+        console.log(form);
+     }
+
+
     return (
         <div>
             <Navbar></Navbar>
             <div>
                 <div className="flex justify-center items-center mt-5">
+                    <form onSubmit={handleLogin}>
                     <div className="bg-white p-6  border-2 border-gray-200 rounded-lg shadow-md ">
                         <h2 className="text-2xl font-bold mb-4">Login</h2>
 
@@ -43,9 +53,7 @@ const Login = () => {
                         </div>
 
                         {/* Login Button */}
-                        <button className="w-full bg-orange-500 text-gray-800 py-2 font-semibold rounded-md hover:bg-orange-600 transition">
-                            Login
-                        </button>
+                        <button className="w-full bg-orange-500 text-gray-800 py-2 font-semibold rounded-md hover:bg-orange-600 transition"> Login</button>
 
                         <p className="text-center font-bold mt-4 text-gray-800">
                             Don't have an account?{" "}
@@ -54,6 +62,7 @@ const Login = () => {
                             </Link>
                         </p>
                     </div>
+                    </form>
                 </div>
 
                 {/* another */}

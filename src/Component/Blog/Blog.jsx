@@ -7,9 +7,9 @@ const Blog = ({blog}) => {
 
     return (
         <div className="flex mb-8">
-            <img className="w-[250px] h-[210px]" src={img} alt="" />
+            <img className="w-[250px] h-[240px]" src={img} alt="" />
             <div className="ml-5 space-y-2 -mt-2">
-                <h3 className="text-lg font-bold">{title}</h3>
+                <h3 className="text-lg font-bold mt-2">{title}</h3>
                 <p className="whitespace-pre text-lg">{details}</p>
                 <p className="text-lg">{facility}</p>
                 <p className="text-lg">Cancellation fexibility availiable</p>
@@ -20,7 +20,7 @@ const Blog = ({blog}) => {
                 <p className="ml-5 font-medium">{stay}</p>
                 <p className="ml-5 font-bold text-lg">${booking_price}</p>
                 </div>
-                <button className="btn text-lg font-bold bg-cyan-200 w-full">Confirm Booking</button>
+                <button className="btn text-lg font-bold bg-cyan-200 w-80 ">Confirm Booking</button>
             </div>
         </div>
     );

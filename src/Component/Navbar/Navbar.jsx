@@ -34,19 +34,19 @@ const Navbar = () => {
                 <div>
                     <ul className={`flex text-lg font-medium ${isHomePage || isBookingPage? "text-white" : "text-black ml-56"}  `}>
                         <li className="mr-10">
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink className="hover:bg-[#c9e3ad] hover:font-semibold px-2 py-1 rounded-lg" to="/">Home</NavLink>
                         </li>
                         <li className="mr-10">
-                            <NavLink>News</NavLink>
+                            <NavLink className="hover:bg-[#c9e3ad] hover:font-semibold px-2 py-1 rounded-lg">News</NavLink>
                         </li>
                         <li className="mr-10">
-                            <NavLink>Destination</NavLink>
+                            <NavLink className="hover:bg-[#c9e3ad] hover:font-semibold px-2 py-1 rounded-lg">Destination</NavLink>
                         </li>
                         <li className="mr-10">
-                            <NavLink to="/blog">Blog</NavLink>
+                            <NavLink className="hover:bg-[#c9e3ad] px-2 py-1 rounded-lg hover:font-semibold" to="/blog">Blog</NavLink>
                         </li>
                         <li className="mr-10">
-                            <NavLink>Contact</NavLink>
+                            <NavLink className="hover:bg-[#c9e3ad] hover:font-semibold px-2 py-1 rounded-lg">Contact</NavLink>
                         </li>
                     </ul>
                 </div>
