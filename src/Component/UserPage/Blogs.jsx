@@ -1,8 +1,9 @@
 import { useLoaderData } from "react-router-dom";
-
+import moment from 'moment';
 
 import Navbar from '../Navbar/Navbar';
 import Blog from "../Blog/Blog";
+
 
 const Blogs = () => {
     const blogs = useLoaderData();
@@ -14,8 +15,12 @@ const Blogs = () => {
            </div>
             <div>
                 <div>
-                    <div className="flex">
-                        <Blog></Blog>
+                    <div className="gap-5 mt-3">
+                       <p className="text-lg ">{moment().format("DD, MMMM, YYYY")}</p>
+                       <p className="text-2xl font-bold mb-5">Stay in Cox's Bazar</p>
+                        {
+                           blogs.map(blog => <Blog key={blog} blog={blog}></Blog>) 
+                        }
                     </div>
                     
                 </div>

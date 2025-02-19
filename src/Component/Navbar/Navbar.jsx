@@ -34,6 +34,9 @@ const Navbar = () => {
                 <div>
                     <ul className={`flex text-lg font-medium ${isHomePage || isBookingPage? "text-white" : "text-black ml-56"}  `}>
                         <li className="mr-10">
+                            <NavLink to="/">Home</NavLink>
+                        </li>
+                        <li className="mr-10">
                             <NavLink>News</NavLink>
                         </li>
                         <li className="mr-10">
