@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "img": "../src/assets/saintMarint.png",
+      "img": "/images/saintMarint.png",
       "title": "Light bright airy stylish apt & safe peaceful stay",
       "details": "4 guests  2 bedrooms   2 beds   2 baths",
       "facility": "Wifi, Air conditioning, Kitchen",
@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "img": "../src/assets/Sajek.png",
+      "img": "/images/Sajek.png",
       "title": "Cozy modern apartment with city view",
       "details": "3 guests   1 bedroom   1 bed   1 bath",
       "facility": "Wifi, Kitchen, Free parking",
@@ -23,7 +23,7 @@
     },
     {
       "id": 3,
-      "img": "../src/assets/Sreemongol.png",
+      "img": "/images/Sreemongol.png",
       "title": "Luxury suite in the heart of downtown",
       "details": "5 guests   3 bedrooms   3 beds   2 baths",
       "facility": "Wifi, Pool, Gym",
@@ -34,7 +34,7 @@
     },
     {
       "id": 4,
-      "img": "../src/assets/Rectangle 27.png",
+      "img": "/images/Rectangle 27.png",
       "title": "Beachfront villa with stunning sea view",
       "details": "6 guests   3 bedrooms   4 beds   3 baths",
       "facility": "Wifi, Kitchen, Private beach",
@@ -45,7 +45,7 @@
     },
     {
       "id": 5,
-      "img": "../src/assets/Rectangle 26.png",
+      "img": "/images/Rectangle 26.png",
       "title": "Quiet countryside cottage retreat",
       "details": "2 guests   1 bedroom   1 bed   1 bath",
       "facility": "Wifi, Fireplace, Garden",
